@@ -2,6 +2,8 @@ function addition(numbers) {
   // console.log(numbers)
   if (!numbers) return 0;
 
+  numbers = numbers.replace("\n", ",")
+
   let num = numbers.split(",");
 
   let numint = num.map((val) => {
