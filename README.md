@@ -24,8 +24,6 @@ Phase 2 :
   console.log(intnum);
     */
 
-
-
     let numint = num.map((val) => {
         return parseInt(val)
     })
@@ -34,6 +32,12 @@ Phase 2 :
     })
     return total;
 
+
+Phase 3 :
+    //numbers = numbers.replace("\n", ",") //Replaces first occurance
+    numbers = numbers.replaceAll("\n", ",")
+
+Phase 4 :
 
 
 
