@@ -12,8 +12,9 @@ function addition(numbers) {
     if(start == "//"){
       let initialarray = numbers.split("")
       let slicearray = initialarray.slice(4).join('').split("")
-        console.log(slicearray)
+        // console.log(slicearray)
 
+        
         //5th part
       for(let i=0; i< slicearray.length; i++){
         // console.log("Outsid ForLoop")

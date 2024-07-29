@@ -1,48 +1,63 @@
-npm init -y
-calculator.js and testcalculator.js
-node testcalculator.js
+**Calculator Project**
 
-Phase 1 : 
-    if(!numbers) return 0;
+**Setup**
 
-Phase 2 :
-    let num = numbers.split(",")
+1. Initialize a new Node.js project by running `npm init -y` in your terminal.
+2. Create two new files: `calculator.js` and `testcalculator.js`.
+3. Run `node testcalculator.js` to test the calculator functionality.
 
+**Phases of Calculator Functionality**
 
-    /*
-    //Returns just 1st digit.
-  let intnum = parseInt(num);
-  console.log(intnum);
-    */
+### Phase 1: Handling Empty Input
 
-    /*
-    //Undefined
-  let intnum = num.forEach((val) => {
-    let a = parseInt(val);
-    return a;
-  });
-  console.log(intnum);
-    */
+```javascript
+if(!numbers) return 0;
+```
 
-    let numint = num.map((val) => {
-        return parseInt(val)
-    })
-    let total = numint.reduce((val, acc) => {
-            return val + acc
-    })
-    return total;
+### Phase 2: Basic Calculator Functionality
 
+```javascript
+let num = numbers.split(",")
 
-Phase 3 :
-    //numbers = numbers.replace("\n", ",") //Replaces first occurance
-    numbers = numbers.replaceAll("\n", ",")
+/*
+//Returns just 1st digit.
+let intnum = parseInt(num);
+console.log(intnum);
+*/
 
-Phase 4 : 
-    // Delimiter Part
+/*
+//Undefined
+let intnum = num.forEach((val) => {
+  let a = parseInt(val);
+  return a;
+});
+console.log(intnum);
+*/
 
-Phase 5 :
-    // Throw Exception for Negative integers.    
+let numint = num.map((val) => {
+  return parseInt(val)
+})
+let total = numint.reduce((val, acc) => {
+  return val + acc
+})
+return total;
+```
 
+### Phase 3: Handling Newline Characters
 
+```javascript
+//numbers = numbers.replace("\n", ",") //Replaces first occurance
+numbers = numbers.replaceAll("\n", ",")
+```
 
+### Phase 4: Custom Delimiter Support
 
+// Delimiter Part
+
+### Phase 5: Error Handling for Negative Integers
+
+// Throw Exception for Negative integers.
+
+**Example Usage**
+
+* Run `node testcalculator.js` to test the calculator functionality.
