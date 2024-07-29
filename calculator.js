@@ -3,6 +3,20 @@ function addition(numbers) {
     //1st part
     if (!numbers) return 0;
     
+
+    //5th part
+    let initialarray = numbers.split("")
+      let slicearray = initialarray.slice(4).join('').split("")
+        // console.log(slicearray)    
+      for(let i=0; i< slicearray.length; i++){
+        // console.log("Outsid ForLoop")
+        if(slicearray[i] === "-" && Number.isInteger(parseInt(slicearray[i+1]))){
+            let negativeinteger;
+            negativeinteger = parseInt(slicearray[i] + slicearray[i+1])
+        // console.log(negativeinteger)
+        throw new Error(`Negative numbers not allowed: ${negativeinteger}`);
+        }
+    }
     
     //4th part
     let val = numbers.split("")
@@ -13,20 +27,6 @@ function addition(numbers) {
       let initialarray = numbers.split("")
       let slicearray = initialarray.slice(4).join('').split("")
         // console.log(slicearray)
-
-        
-        //5th part
-      for(let i=0; i< slicearray.length; i++){
-        // console.log("Outsid ForLoop")
-        if(slicearray[i] === "-" && Number.isInteger(parseInt(slicearray[i+1]))){
-            let negativeinteger;
-            negativeinteger = parseInt(slicearray[i] + slicearray[i+1])
-        // console.log(negativeinteger)
-        throw new Error(`Negative numbers not allowed: ${negativeinteger}`);
-        }
-    }
-
-
 
       let filterarray = slicearray.filter((e) => {
         return Number.isInteger(parseInt(e)) || e === delimiter
