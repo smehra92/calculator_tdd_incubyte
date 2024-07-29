@@ -3,6 +3,7 @@ function addition(numbers) {
     //1st part
     if (!numbers) return 0;
     
+    
     //4th part
     let val = numbers.split("")
     let start = val[0] + val[1]
@@ -11,6 +12,21 @@ function addition(numbers) {
     if(start == "//"){
       let initialarray = numbers.split("")
       let slicearray = initialarray.slice(4).join('').split("")
+        console.log(slicearray)
+
+        //5th part
+      for(let i=0; i< slicearray.length; i++){
+        // console.log("Outsid ForLoop")
+        if(slicearray[i] === "-" && Number.isInteger(parseInt(slicearray[i+1]))){
+            let negativeinteger;
+            negativeinteger = parseInt(slicearray[i] + slicearray[i+1])
+        // console.log(negativeinteger)
+        throw new Error(`Negative numbers not allowed: ${negativeinteger}`);
+        }
+    }
+
+
+
       let filterarray = slicearray.filter((e) => {
         return Number.isInteger(parseInt(e)) || e === delimiter
       });
@@ -19,6 +35,7 @@ function addition(numbers) {
       let intarray = stringarray.map((e) => {
         return parseInt(e)
       })
+
       const total = intarray.reduce((e, acc) => { return e + acc })
       console.log(total)
       return total;
